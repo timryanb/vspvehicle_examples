@@ -8,7 +8,7 @@ interact with multiple independent vehicle instances in the same Python script.
 
 # Create first vehicle instance
 veh1 = vsp.VSPVehicle()
-# Create first vehicle instance
+# Create second vehicle instance
 veh2 = vsp.VSPVehicle()
 # Add a wing to vehicle instance 1
 veh1.AddGeom("WING")
