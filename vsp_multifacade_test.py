@@ -1,15 +1,17 @@
 import openvsp_config
-openvsp_config.LOAD_GRAPHICS = True
 openvsp_config.LOAD_MULTI_FACADE = True
 
-import openvsp as vsp
+import openvsp
 import degen_geom as dg
 
 # VSP file containing single
 vsp_file = "rect_wing.vsp3"
 
 # Create a private vsp server instance
-vsp_model = vsp.vsp_servers.start_vsp_instance("openaerostruct")
+vsp_model = openvsp.vsp_servers.start_vsp_instance("openaerostruct")
+
+# This is how you would access an already created instance in another location in the code
+# vsp_model = openvsp.get_instance("openaerostruct")
 
 # Read in file
 vsp_model.ReadVSPFile(vsp_file)
